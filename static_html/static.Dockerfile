@@ -21,4 +21,4 @@ COPY ./src .
 # python -m http.server 8000 
 # docker command to have container running on a port
 #docker run -it -p localport:containerport appname
-# CMD ["python","-m","http.server","8000"]
+CMD ["python","-m","http.server","8000"]
