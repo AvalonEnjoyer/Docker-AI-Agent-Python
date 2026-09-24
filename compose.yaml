@@ -14,6 +14,9 @@ services: # docker compose expects
     # volumes ignore dockerignore commands
     volumes: 
     - ./backend/src:/app
+    depends_on:
+      db_service:
+        condition: service_healthy
     develop:
       watch:
         - action: rebuild
@@ -37,6 +40,12 @@ services: # docker compose expects
       - POSTGRES_DB=mydb
     # env_file:
       # - .env.sample-db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dbuser -d mydb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     volumes:
       - dc_managed_db_volume:/var/lib/postgresql/data
   static_html: # custom key name
