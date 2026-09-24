@@ -10,7 +10,7 @@ WORKDIR /app
 COPY requirements.txt /tmp/requirements.txt
 
 # Run within container while building
-RUN pip install -r /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
 COPY ./src .
 
 CMD ["sh", "-c", "exec python -m uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]

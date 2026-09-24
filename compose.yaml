@@ -23,7 +23,7 @@ services: # docker compose expects
         # - action: sync
         #   path: ./backend/src
         #   target: /app
-        - action: restart
+        - action: sync+restart
           path: ./backend/src
   static_html: # custom key name
     # image: python:3.14
