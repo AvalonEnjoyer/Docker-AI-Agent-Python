@@ -35,3 +35,6 @@ substitutions:
   _REPOSITORY: "cloud-run-source-deploy"
   _IMAGE: "docker-ai-agent-python/docker-agentic-ai-deployment"
   _SERVICE: "docker-agentic-ai-deployment"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
