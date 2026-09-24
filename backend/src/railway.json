@@ -7,7 +7,7 @@
       		"src/**", 
       		"requirements.txt",
             "railway.json",
-      		"Dockerfile"
+      		"dev.Dockerfile"
        	]
       },
     "deploy": {
