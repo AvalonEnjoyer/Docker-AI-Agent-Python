@@ -32,6 +32,6 @@ steps:
 
 substitutions:
   _REGION: "australia-southeast1"
-  _REPOSITORY: "YOUR_ARTIFACT_REGISTRY_REPOSITORY"
-  _IMAGE: "backend"
-  _SERVICE: "YOUR_CLOUD_RUN_SERVICE"
+  _REPOSITORY: "cloud-run-source-deploy"
+  _IMAGE: "docker-ai-agent-python/docker-agentic-ai-deployment"
+  _SERVICE: "docker-agentic-ai-deployment"
