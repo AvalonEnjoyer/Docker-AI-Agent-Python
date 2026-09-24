@@ -43,6 +43,7 @@ htmlcov/
 .env
 .env.*
 !.env.sample
+!.env.sample-db
 
 # OS files
 .DS_Store
