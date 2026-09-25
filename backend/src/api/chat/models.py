@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Field
 
 class ChatMessagePayload(SQLModel):
-    # for validation
+    # for validation and serialization
     message: str
 
 class ChatMessage(SQLModel, table=True):
